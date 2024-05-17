@@ -1,0 +1,1 @@
+SELECT EXTRA_TYPE_ID,extra_type_title AS value,extra_type_title AS label FROM KPDBA.dymchk_extra_type_master where cancel_flag = 'F'

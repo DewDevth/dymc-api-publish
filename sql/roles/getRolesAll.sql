@@ -1,0 +1,4 @@
+SELECT
+    *
+FROM
+    KPDBA.DYMCHK_ROLES

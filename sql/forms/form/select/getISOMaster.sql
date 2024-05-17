@@ -1,0 +1,1 @@
+select DOC_CODE,DOC_REVISION,DOC_NAME,DYMC_FLAG     from ISO_Master

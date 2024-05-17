@@ -1,0 +1,21 @@
+INSERT INTO KPDBA.DYMCHK_FORM_VALUE (
+  FORM_ID,
+  SEQ,
+  TOPIC_ID,
+  ROW_ID,
+  COL_ID,
+  CR_DATE,
+  CR_UID,
+  CR_OID,
+  CANCEL_FLAG
+) VALUES (
+  :S_FORM_ID,
+  :S_SEQ,
+  :S_TOPIC_ID,
+  :S_ROW_ID,
+  :S_COL_ID,
+  :S_CR_DATE,
+  :S_CR_UID,
+  :S_CR_OID,
+  'F'
+)

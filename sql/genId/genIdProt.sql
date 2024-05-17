@@ -1,0 +1,16 @@
+SELECT  PREF|| 
+        CASE
+            WHEN DOC_YY = CUR_YY
+            THEN TRIM(DOC_YY) ||  TRIM(TO_CHAR(ID + 1, '0000'))
+            ELSE TRIM(CUR_YY) || TRIM(TO_CHAR( 1, '0000'))
+        END AS PROT_ID       
+FROM
+(
+    SELECT SUBSTR(TRIM(PROT_ID), 1, 3 )  PREF
+    , TRIM(TO_CHAR(TO_NUMBER(TO_CHAR(sysdate, 'YY')) + 43)) || TO_CHAR(sysdate, 'MM') CUR_YY
+    , SUBSTR(TRIM(PROT_ID), 4, 4 )  DOC_YY
+    , MAX(TO_NUMBER(SUBSTR(TRIM(PROT_ID), 8))) ID 
+    FROM KPDBA.DYMCHK_PROT
+    WHERE SUBSTR(PROT_ID, 4,4) = TRIM(TO_CHAR(TO_NUMBER(TO_CHAR(sysdate, 'YY')) + 43)) || TO_CHAR(sysdate, 'MM') 
+    GROUP BY SUBSTR(TRIM(PROT_ID), 1, 3 ), SUBSTR(TRIM(PROT_ID), 4, 4 )
+)

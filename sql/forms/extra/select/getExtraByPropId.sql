@@ -1,0 +1,2 @@
+SELECT PROT_ID,TOPIC_ID,PROP_ID,EXTRA_ID,EXTRA_TYPE,extra_desc,extra_no FROM KPDBA.dymchk_prot_extra
+WHERE PROT_ID = :S_PROT_ID 

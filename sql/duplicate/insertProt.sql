@@ -1,0 +1,30 @@
+INSERT INTO
+    KPDBA.DYMCHK_PROT (
+        PROT_ID,
+        FORM_CODE,
+        FORM_REVISION,
+        FORM_TITLE,
+        FORM_DESC,
+        ISO_DOC_CODE,
+        ISO_DOC_REVISION,
+        APPV_FLAG,
+        CR_DATE,
+        CR_OID,
+        CR_UID,
+        CANCEL_FLAG
+    )
+VALUES
+    (
+        :S_PROT_ID,
+        :S_FORM_CODE,
+        :S_FORM_REVISION,
+        :S_FORM_TITLE,
+        :S_FORM_DESC,
+        :S_ISO_DOC_CODE,
+        :S_ISO_DOC_REVISION,
+        :S_APPV_FLAG,
+        :S_CR_DATE,
+        :S_CR_OID,
+        :S_CR_UID,
+        'F'
+    )
